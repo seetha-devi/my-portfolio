@@ -444,7 +444,7 @@ export const projectsData = [
 	},
 	{
 		id: 5,
-		title: 'GBBCv(client)',
+		title: 'GBBC (client)',
 		url: 'wetalk-social-app',
 		category: 'Web Application',
 		img: '/images/gbbc.png',
