@@ -47,11 +47,7 @@ export const projectsData = [
 					title: 'Website',
 					details: 'https://www.innovatefinance.com/',
 				},
-				// {
-				// 	id: uuidv4(),
-				// 	title: 'Phone',
-				// 	details: '555 8888 888',
-				// },
+				
 			],
 			ObjectivesHeading: 'Objective',
 			ObjectivesDetails:
@@ -98,28 +94,7 @@ export const projectsData = [
 				},
 			],
 			SocialSharingHeading: 'Share This',
-			// SocialSharing: [
-			// 	{
-			// 		id: 1,
-			// 		icon: <FiGlobe />,
-			// 		url: 'https://www.stoman.me/',
-			// 	},
-			// 	{
-			// 		id: 2,
-			// 		icon: <FiGithub />,
-			// 		url: 'https://github.com/seetha-devi',
-			// 	},
-			// 	{
-			// 		id: 3,
-			// 		icon: <BsWhatsapp />,
-			// 		url: 'https://wa.me/8072554494',
-			// 	},
-			// 	{
-			// 		id: 4,
-			// 		icon: <FiLinkedin />,
-			// 		url: 'https://www.linkedin.com/in/seetha-devi-597a76262/',
-			// 	}
-			// ],
+		
 		},
 	},
 	{
@@ -207,28 +182,7 @@ export const projectsData = [
 				},
 			],
 			SocialSharingHeading: 'Share This',
-			// SocialSharing: [
-			// 	{
-			// 		id: 1,
-			// 		icon: <FiGlobe />,
-			// 		url: 'https://www.stoman.me/',
-			// 	},
-			// 	{
-			// 		id: 2,
-			// 		icon: <FiGithub />,
-			// 		url: 'https://github.com/seetha-devi',
-			// 	},
-			// 	{
-			// 		id: 3,
-			// 		icon: <BsWhatsapp />,
-			// 		url: 'https://wa.me/8072554494',
-			// 	},
-			// 	{
-			// 		id: 4,
-			// 		icon: <FiLinkedin />,
-			// 		url: 'https://www.linkedin.com/in/seetha-devi-597a76262/',
-			// 	}
-			// ],
+			
 		},
 	},
 	{
@@ -312,28 +266,7 @@ export const projectsData = [
 				
 			],
 			SocialSharingHeading: 'Share This',
-			// SocialSharing: [
-			// 	{
-			// 		id: 1,
-			// 		icon: <FiGlobe />,
-			// 		url: 'https://www.stoman.me/',
-			// 	},
-			// 	{
-			// 		id: 2,
-			// 		icon: <FiGithub />,
-			// 		url: 'https://github.com/seetha-devi',
-			// 	},
-			// 	{
-			// 		id: 3,
-			// 		icon: <BsWhatsapp />,
-			// 		url: 'https://wa.me/8072554494',
-			// 	},
-			// 	{
-			// 		id: 4,
-			// 		icon: <FiLinkedin />,
-			// 		url: 'https://www.linkedin.com/in/seetha-devi-597a76262/',
-			// 	}
-			// ],
+		
 		},
 	},
 	{
@@ -418,28 +351,7 @@ export const projectsData = [
 				}
 			],
 			SocialSharingHeading: 'Share This',
-			// // SocialSharing: [
-			// // 	{
-			// // 		id: 1,
-			// // 		icon: <FiGlobe />,
-			// // 		url: 'https://www.stoman.me/',
-			// // 	},
-			// // 	{
-			// // 		id: 2,
-			// // 		icon: <FiGithub />,
-			// // 		url: 'https://github.com/seetha-devi',
-			// // 	},
-			// // 	{
-			// // 		id: 3,
-			// // 		icon: <BsWhatsapp />,
-			// // 		url: 'https://wa.me/8072554494',
-			// // 	},
-			// // 	{
-			// // 		id: 4,
-			// // 		icon: <FiLinkedin />,
-			// // 		url: 'https://www.linkedin.com/in/seetha-devi-597a76262/',
-			// // 	}
-			// ],
+		
 		},
 	},
 	{
@@ -529,28 +441,6 @@ export const projectsData = [
 				
 			],
 			SocialSharingHeading: 'Share This',
-			// SocialSharing: [
-			// 	{
-			// 		id: 1,
-			// 		icon: <FiGlobe />,
-			// 		url: 'https://www.stoman.me/',
-			// 	},
-			// 	{
-			// 		id: 2,
-			// 		icon: <FiGithub />,
-			// 		url: 'https://github.com/seetha-devi',
-			// 	},
-			// 	{
-			// 		id: 3,
-			// 		icon: <BsWhatsapp />,
-			// 		url: 'https://wa.me/8072554494',
-			// 	},
-			// 	{
-			// 		id: 4,
-			// 		icon: <FiLinkedin />,
-			// 		url: 'https://www.linkedin.com/in/seetha-devi-597a76262/',
-			// 	}
-			// ],
 		},
 	},
 	{
@@ -635,28 +525,7 @@ export const projectsData = [
 				
 			],
 			SocialSharingHeading: 'Share This',
-			// SocialSharing: [
-			// 	{
-			// 		id: 1,
-			// 		icon: <FiGlobe />,
-			// 		url: 'https://www.stoman.me/',
-			// 	},
-			// 	{
-			// 		id: 2,
-			// 		icon: <FiGithub />,
-			// 		url: 'https://github.com/seetha-devi',
-			// 	},
-			// 	{
-			// 		id: 3,
-			// 		icon: <BsWhatsapp />,
-			// 		url: 'https://wa.me/8072554494',
-			// 	},
-			// 	{
-			// 		id: 4,
-			// 		icon: <FiLinkedin />,
-			// 		url: 'https://www.linkedin.com/in/seetha-devi-597a76262/',
-			// 	}
-			// ],
+		
 		},
 	},
 ];
