@@ -14,37 +14,24 @@ function ScrollToTopButton() {
     };
 
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  if (typeof window === 'undefined') {
-    // Prevent rendering on the server
-    return null;
-  }
+  // if (typeof window === 'undefined') {
+  //   // Prevent rendering on the server
+  //   return null;
+  // }
 
   return (
-    <FiChevronUp
-      className="scrollToTop"
+    <div
+      className={`scroll-to-top ${showScroll ? 'show' : ''}`}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      style={{
-        height: 40,
-        width: 40,
-        padding: 7,
-        borderRadius: 50,
-        right: 50,
-        bottom: 50,
-        position: 'fixed',
-        cursor: 'pointer',
-        backgroundColor: '#333',
-        color: '#fff',
-        display: showScroll ? 'flex' : 'none',
-        alignItems: 'center',
-        justifyContent: 'center',
-        zIndex: 1000,
-      }}
-    />
+    >
+      <FiChevronUp className="icon" />
+    </div>
   );
 }
 

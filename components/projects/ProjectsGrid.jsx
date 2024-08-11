@@ -1,36 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import { projectsData } from '../../data/projectsData';
 import ProjectsFilter from './ProjectsFilter';
 
 function ProjectsGrid() {
-	const [searchProject, setSearchProject] = useState();
-	const [selectProject, setSelectProject] = useState();
+	const [searchProject, setSearchProject] = useState('');
+	const [selectProject, setSelectProject] = useState('');
+	const [filteredProjects, setFilteredProjects] = useState(projectsData);
 
-	// @todo - To be fixed
-	// const searchProjectsByTitle = projectsData.filter((item) => {
-	// 	const result = item.title
-	// 		.toLowerCase()
-	// 		.includes(searchProject.toLowerCase())
-	// 		? item
-	// 		: searchProject == ''
-	// 		? item
-	// 		: '';
-	// 	return result;
-	// });
+	useEffect(() => {
+		// Perform the filtering when search or category changes
+		const searchProjects = projectsData.filter((item) =>
+			item.title.toLowerCase().includes(searchProject.toLowerCase())
+		);
 
-	const selectProjectsByCategory = projectsData.filter((item) => {
-		let category =
-			item.category.charAt(0).toUpperCase() + item.category.slice(1);
-		return category.includes(selectProject);
-	});
+		const categoryFilteredProjects = searchProjects.filter((item) => {
+			const category = item.category.charAt(0).toUpperCase() + item.category.slice(1);
+			return category.includes(selectProject);
+		});
+
+		setFilteredProjects(categoryFilteredProjects);
+	}, [searchProject, selectProject]);
 
 	return (
-		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
+		<div className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
 				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-					Projects portfolio
+					Projects Portfolio
 				</p>
 			</div>
 
@@ -70,20 +67,18 @@ function ProjectsGrid() {
                                 cursor-pointer
                                 "
 						>
-							<FiSearch className="text-ternary-dark dark:text-ternary-light w-5 h-5"></FiSearch>
+							<FiSearch className="text-ternary-dark dark:text-ternary-light w-5 h-5" />
 						</span>
 						<input
-							onChange={(e) => {
-								setSearchProject(e.target.value);
-							}}
+							onChange={(e) => setSearchProject(e.target.value)}
 							className="
-                                ont-general-medium 
+                                font-general-medium 
                                 pl-3
                                 pr-1
                                 sm:px-4
                                 py-2
                                 border 
-                            border-gray-200
+                                border-gray-200
                                 dark:border-secondary-dark
                                 rounded-lg
                                 text-sm
@@ -96,9 +91,8 @@ function ProjectsGrid() {
 							id="name"
 							name="name"
 							type="search"
-							required=""
 							placeholder="Search Projects"
-							aria-label="Name"
+							aria-label="Search Projects"
 						/>
 					</div>
 
@@ -107,15 +101,11 @@ function ProjectsGrid() {
 			</div>
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-5">
-				{selectProject
-					? selectProjectsByCategory.map((project, index) => {
-							return <ProjectSingle key={index} {...project} />;
-					  })
-					: projectsData.map((project, index) => (
-							<ProjectSingle key={index} {...project} />
-					  ))}
+				{filteredProjects.map((project, index) => (
+					<ProjectSingle key={index} {...project} />
+				))}
 			</div>
-		</section>
+		</div>
 	);
 }
 

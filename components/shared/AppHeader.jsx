@@ -1,8 +1,7 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { FiSun, FiMoon, FiX, FiMenu } from 'react-icons/fi';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import HireMeModal from '../HireMeModal';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
@@ -11,26 +10,18 @@ function AppHeader() {
 	const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
 
+	useEffect(() => {
+		// Ensure the client-side rendering matches the server-side
+		document.documentElement.classList.toggle('dark', activeTheme === 'dark');
+	}, [activeTheme]);
+
 	function toggleMenu() {
-		if (!showMenu) {
-			setShowMenu(true);
-		} else {
-			setShowMenu(false);
-		}
+		setShowMenu(prev => !prev);
 	}
 
 	function showHireMeModal() {
-		if (!showModal) {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.add('overflow-y-hidden');
-			setShowModal(true);
-		} else {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.remove('overflow-y-hidden');
-			setShowModal(false);
-		}
+		document.getElementsByTagName('html')[0].classList.toggle('overflow-y-hidden', !showModal);
+		setShowModal(prev => !prev);
 	}
 
 	return (
@@ -46,19 +37,10 @@ function AppHeader() {
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
 						<Link href="/">
-							{activeTheme === 'dark' ? (
-								<div className="text-indigo-500 text-3xl sm:text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-lg hover:text-indigo-600 transition duration-300">
-									Seetha
-								</div>
-							) : (
-
-								<div className="text-white text-3xl sm:text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-lg hover:text-gray-300 transition duration-300">
-									Seetha
-								</div>
-							)}
+							<div className={`text-3xl sm:text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-lg transition duration-300 ${activeTheme === 'dark' ? 'text-white hover:text-gray-600' : 'text-indigo-500 hover:text-indigo-600'}`}>
+								Seetha
+							</div>
 						</Link>
-
-
 					</div>
 
 					{/* Theme switcher small screen */}
@@ -82,17 +64,11 @@ function AppHeader() {
 							className="focus:outline-none"
 							aria-label="Hamburger Menu"
 						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light"
-							>
-								{showMenu ? (
-									<FiX className="text-3xl" />
-								) : (
-									<FiMenu className="text-3xl" />
-								)}
-							</svg>
+							{showMenu ? (
+								<FiX className="text-3xl fill-current text-secondary-dark dark:text-ternary-light" />
+							) : (
+								<FiMenu className="text-3xl fill-current text-secondary-dark dark:text-ternary-light" />
+							)}
 						</button>
 					</div>
 				</div>
@@ -181,13 +157,12 @@ function AppHeader() {
 				</div>
 			</div>
 			<div>
-				{showModal ? (
+				{showModal && (
 					<HireMeModal
 						onClose={showHireMeModal}
 						onRequest={showHireMeModal}
 					/>
-				) : null}
-				{showModal ? showHireMeModal : null}
+				)}
 			</div>
 		</motion.nav>
 	);

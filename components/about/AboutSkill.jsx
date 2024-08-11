@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 
-const AboutClientSingle = ({ data }) => {
+const AboutSkill = ({ data }) => {
   // Set initial state to the name of the first skill
   const [selectedSkill, setSelectedSkill] = useState(data[0]?.name || null);
 
@@ -49,4 +49,4 @@ const AboutClientSingle = ({ data }) => {
   );
 };
 
-export default AboutClientSingle;
+export default AboutSkill;

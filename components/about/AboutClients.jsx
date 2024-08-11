@@ -1,10 +1,10 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { clientsData } from '../../data/clientsData';
 import { clientsHeading } from '../../data/clientsData';
-import AboutClientSingle from './AboutClientSingle';
+import AboutSkill from './AboutSkill';
 
 function AboutClients() {
-	const [clients, setClients] = useState(clientsData);
+	const clients= clientsData;
 	return (
 		<div className="mt-10 sm:mt-20">
 			<p className="font-general-medium text-2xl sm:text-4xl text-primary-dark dark:text-primary-light">
@@ -12,7 +12,7 @@ function AboutClients() {
 			</p>
 			<div className="m-4">
 				
-					<AboutClientSingle  data={clients}/>
+					<AboutSkill  data={clients}/>
 						 
 		
 			</div>
