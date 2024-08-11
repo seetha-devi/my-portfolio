@@ -1,11 +1,4 @@
 import { v4 as uuidv4 } from 'uuid';
-// import {
-// 	FiLinkedin,
-// 	FiGlobe,
-// 	FiGithub
-// } from 'react-icons/fi';
-
-// import {BsWhatsapp} from 'react-icons/bs'
 
 export const projectsData = [
 	{
@@ -13,7 +6,7 @@ export const projectsData = [
 		title: 'Innovate Finance(Client)',
 		url: 'innovate-finance',
 		category: 'Web Application',
-		img: '/images/innfin.png',
+		img: '/images/Innfin.png',
 		ProjectHeader: {
 			title: 'Innovate Finance',
 			publishDate: 'January, 2023',
@@ -451,7 +444,7 @@ export const projectsData = [
 	},
 	{
 		id: 5,
-		title: 'GBBC',
+		title: 'GBBCv(client)',
 		url: 'wetalk-social-app',
 		category: 'Web Application',
 		img: '/images/gbbc.png',
