@@ -93,7 +93,7 @@ export const projectsData = [
 						'SEO Enhancements: Applied best practices (meta tags, structured data, keyword optimization) for improved rankings.',
 				},
 			],
-			SocialSharingHeading: 'Share This',
+		
 		
 		},
 	},
@@ -181,7 +181,7 @@ export const projectsData = [
 			
 				},
 			],
-			SocialSharingHeading: 'Share This',
+			
 			
 		},
 	},
@@ -265,7 +265,6 @@ export const projectsData = [
 				}
 				
 			],
-			SocialSharingHeading: 'Share This',
 		
 		},
 	},
@@ -350,7 +349,6 @@ export const projectsData = [
 						
 				}
 			],
-			SocialSharingHeading: 'Share This',
 		
 		},
 	},
@@ -378,7 +376,7 @@ export const projectsData = [
 			},
 			{
 				id: uuidv4(),
-				title: 'WeTalk Social Application',
+				title: 'Global Blockchain Bussines Counsil',
 				img: '/images/mobile-project-2.jpg',
 			},
 		],
@@ -440,7 +438,7 @@ export const projectsData = [
 				},
 				
 			],
-			SocialSharingHeading: 'Share This',
+			
 		},
 	},
 	{
@@ -524,7 +522,7 @@ export const projectsData = [
 				},
 				
 			],
-			SocialSharingHeading: 'Share This',
+	
 		
 		},
 	},
