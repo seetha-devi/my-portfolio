@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import HireMeModal from '../HireMeModal';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
-
+import { RiComputerLine } from "react-icons/ri";
 function AppHeader() {
     const [showMenu, setShowMenu] = useState(false);
     const [showModal, setShowModal] = useState(false);
@@ -30,8 +30,8 @@ function AppHeader() {
                 <div className="flex justify-between items-center px-4 sm:px-0">
                     <div>
                         <Link href="/">
-                            <div className={`text-3xl sm:text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-lg transition duration-300 ${activeTheme === 'dark' ? 'text-white hover:text-gray-600' : 'text-indigo-500 hover:text-indigo-600'}`}>
-                                Seetha
+                            <div className={`text-3xl flex gap-2 sm:text-3xl md:text-4xl font-extrabold tracking-wide drop-shadow-lg transition duration-300 ${activeTheme === 'dark' ? 'text-white hover:text-gray-600' : 'text-indigo-500 hover:text-indigo-600'}`}>
+                                Seetha <span><RiComputerLine /></span>
                             </div>
                         </Link>
                     </div>

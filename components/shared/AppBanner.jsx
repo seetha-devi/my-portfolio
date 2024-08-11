@@ -48,8 +48,8 @@ function AppBanner() {
 					className="flex justify-center sm:block"
 				>
 					<a
-						download="seethadevi-resume.pdf"
-						href="/files/seethadevi-resume.pdf"
+						download="seethadevi_resume.pdf"
+						href="/files/seethadevi_resume.pdf"
 						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-500 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-900 text-grey-900 hover:text-white duration-500"
 						aria-label="Download Resume"
 					>
