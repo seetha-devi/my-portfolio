@@ -49,7 +49,7 @@ export const projectsData = [
 				},
 				
 			],
-			ObjectivesHeading: 'Objective',
+			ObjectivesHeading: 'Objectives',
 			ObjectivesDetails:
 				'Skilled in implementing SEO best practices to enhance website performance, resulting in improved loading times and enhanced user navigation.',
 			Technologies: [
