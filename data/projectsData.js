@@ -10,7 +10,7 @@ export const projectsData = [
 		ProjectHeader: {
 			title: 'Innovate Finance',
 			publishDate: 'January, 2023',
-			tags: 'UI / Frontend',
+			tags: 'UI / Frontend Development',
 		},
 		ProjectImages: [
 			{
