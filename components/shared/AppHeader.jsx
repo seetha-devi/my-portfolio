@@ -2,22 +2,19 @@ import { useState, useEffect } from 'react';
 import { FiSun, FiMoon, FiX, FiMenu } from 'react-icons/fi';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import HireMeModal from '../HireMeModal';
+// import HireMeModal from '../HireMeModal';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { RiComputerLine } from "react-icons/ri";
 function AppHeader() {
     const [showMenu, setShowMenu] = useState(false);
-    const [showModal, setShowModal] = useState(false);
+    // const [showModal, setShowModal] = useState(false);
     const [activeTheme, toggleTheme] = useThemeSwitcher();
 
     function toggleMenu() {
         setShowMenu(prev => !prev);
     }
 
-    function showHireMeModal() {
-        document.getElementsByTagName('html')[0].classList.toggle('overflow-y-hidden', !showModal);
-        setShowModal(prev => !prev);
-    }
+ 
 
     return (
         <motion.nav
@@ -90,13 +87,15 @@ function AppHeader() {
                         </Link>
                     </div>
                     <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-                        <button
-                            onClick={showHireMeModal}
+                       <Link href='/contact'>
+                       <button
+                          
                             className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
                             aria-label="Hire Me Button"
                         >
                             Hire Me
                         </button>
+                       </Link>
                     </div>
                 </div>
 
@@ -126,13 +125,15 @@ function AppHeader() {
                 {/* Header right section buttons */}
                 <div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
                     <div className="hidden md:flex">
-                        <button
-                            onClick={showHireMeModal}
+                       <Link href='/contact'>
+                       <button
+                            
                             className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
                             aria-label="Hire Me Button"
                         >
                             Hire Me
                         </button>
+                       </Link>
                     </div>
 
                     {/* Theme switcher large screen */}
@@ -149,14 +150,14 @@ function AppHeader() {
                     </div>
                 </div>
             </div>
-            <div>
+            {/* <div>
                 {showModal && (
                     <HireMeModal
                         onClose={showHireMeModal}
                         onRequest={showHireMeModal}
                     />
                 )}
-            </div>
+            </div> */}
         </motion.nav>
     );
 }

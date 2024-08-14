@@ -11,7 +11,7 @@ function ProjectSingle(props) {
 
 			{/* Header */}
 			<div>
-				<p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
+				<p className="font-general-medium text-left text-3xl  font-bold text-primary-dark dark:text-primary-light mt-14 sm:mt-20 mb-7">
 					{props.project.ProjectHeader.title}
 				</p>
 				<div className="flex">
@@ -54,7 +54,7 @@ function ProjectSingle(props) {
 				<div className="w-full sm:w-1/3 text-left">
 					{/* Single project client details */}
 					<div className="mb-7">
-						<p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
+						<p className="font-general-regular text-xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
 							{props.project.ProjectInfo.ClientHeading}
 						</p>
 						<ul className="leading-loose">
@@ -87,7 +87,7 @@ function ProjectSingle(props) {
 
 					{/* Single project objectives */}
 					<div className="mb-7">
-						<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+						<p className="font-general-regular text-xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
 							{props.project.ProjectInfo.ObjectivesHeading}
 						</p>
 						<p className="font-general-regular text-primary-dark dark:text-ternary-light">
@@ -97,7 +97,7 @@ function ProjectSingle(props) {
 
 					{/* Single project technologies */}
 					<div className="mb-7">
-						<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+						<p className="font-general-regular text-xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
 							{props.project.ProjectInfo.Technologies[0].title}
 						</p>
 						<p className="font-general-regular text-primary-dark dark:text-ternary-light">

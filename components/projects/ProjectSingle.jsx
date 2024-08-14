@@ -30,7 +30,7 @@ const ProjectSingle = (props) => {
 						/>
 					</div>
 					<div className="h-1/3 text-center px-4 py-6">
-						<p className="font-general-medium text-xl md:text-2xl text-ternary-dark dark:text-ternary-light mb-2">
+						<p className="font-general-medium text-xl  text-ternary-dark dark:text-ternary-light mb-2">
 							{props.title}
 						</p>
 						<span className="text-lg text-ternary-dark dark:text-ternary-light">

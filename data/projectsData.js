@@ -359,7 +359,7 @@ export const projectsData = [
 		category: 'Web Application',
 		img: '/images/gbbc.png',
 		ProjectHeader: {
-			title: 'WeTalk Social Application',
+			title: 'GBBC',
 			publishDate: 'Jul 26, 2023',
 			tags: 'UI / Frontend',
 		},
